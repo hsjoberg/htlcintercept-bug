@@ -1,0 +1,25 @@
+{
+  "name": "htlcintercept-bug",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "postbuild": "cp src/proto.js dist",
+    "run-lsp": "yarn build && node dist/run-lsp.js",
+    "create-invoice": "yarn build && node dist/create-invoice.js",
+    "proto": "pbjs --force-long -t static-module -o src/proto.js proto/rpc.proto proto/router.proto && pbts -o src/proto.d.ts src/proto.js"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hampus Sjöberg",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/grpc-js": "1.2.5",
+    "@grpc/proto-loader": "0.5.6",
+    "@types/config": "^0.0.38",
+    "config": "^3.3.3",
+    "protobufjs": "6.10.2",
+    "typescript": "4.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "14.14.22"
+  }
+}
