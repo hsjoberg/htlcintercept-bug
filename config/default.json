@@ -1,6 +1,5 @@
 {
   "env": "development",
-  "preimage": "",
   "service": {
     "grpcServer": "127.0.0.1:10002",
     "cert": "~/.polar/networks/3/volumes/lnd/bob/tls.cert",

@@ -1,20 +1,16 @@
 # About
 
-This project demonstrates the HtlcIntercept replay bug.
-It occurs when using the HtlcIntercept gRPC API to settle an incoming forward HTLC.
+This project demonstrates the HtlcInterceptor replay bug.
+It occurs when using the HtlcInterceptor gRPC API to settle an incoming forward HTLC.
 
 To demonstrate the issue, a special invoice will be created with route hints to the intermediary
 node which will settle the incoming forward HTLC.
 
 # Prerequisites
 
-You need three nodes for this, the `wallet`, the `service` and the `payer`.  
-The `wallet` and the `service` has to be accessible through gRPC.  
+You need three nodes for this, the `wallet`, the `service` and the `payer`.
+The `wallet` and the `service` has to be accessible through gRPC.
 The `payer` and the `service` must have a channel between eachother.
-
-# Setup
-
-
 
 # Run
 
